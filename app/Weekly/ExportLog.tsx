@@ -7,7 +7,7 @@ import { Button } from "@/shadcn/components/ui/button";
 import { Textarea } from "@/shadcn/components/ui/textarea";
 import { cn } from "@/shadcn/lib/utils";
 
-const ibmPlexMono = IBM_Plex_Mono({ weight: ["400"] });
+const ibmPlexMono = IBM_Plex_Mono({ weight: ["400"], subsets: ["latin"] });
 
 export default function ExportLog() {
   return (
