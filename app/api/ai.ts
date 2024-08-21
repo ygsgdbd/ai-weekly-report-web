@@ -13,10 +13,10 @@ export const useOpenAIBatchMutation = () =>
     mutationFn: (data: {
       inputs: string[];
       openAI: {
-        apiKey: string;
+        apiKey?: string;
       };
     }) =>
-      axios.post(
+      axios.post<{ data: string }>(
         "https://ai-weekly-report-server.ygsgdbd.workers.dev/api/v1/openai/batch",
         data,
       ),
