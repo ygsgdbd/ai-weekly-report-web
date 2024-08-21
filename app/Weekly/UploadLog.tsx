@@ -14,7 +14,7 @@ export default function UploadLog() {
   const mutation = useOpenAIBatchMutation();
   const [systemMsg, setSystemMsg] = useLocalStorage<string>(
     "x-system-msg",
-    `这是一个虚拟币交易所项目，请根据本周的 Git 提交日志生成一份简短的周报。周报应按以下顺序包括内容：
+    `这是一个虚拟币交易所 Web 项目，基于 React 构建，请根据本周的 Git 提交日志生成一份简短的周报。周报应按以下顺序包括内容：：
 1. 主要完成的工作和功能更新；
 2. 修复的 Bug 及其相关背景；
 3. 进行的优化或改进。
@@ -28,7 +28,7 @@ export default function UploadLog() {
   return (
     <div className={"grid gap-4"}>
       <div className={"grid gap-2"}>
-        <Label>提示词</Label>
+        <Label>AI 提示词</Label>
         <Textarea
           className={"min-h-32"}
           disabled={mutation.isLoading}
@@ -76,7 +76,7 @@ export default function UploadLog() {
             {mutation.isLoading && (
               <RefreshCcwIcon className={cn("size-4 animate-spin")} />
             )}
-            上传并返回结果
+            提交
           </Button>
           {result && (
             <>

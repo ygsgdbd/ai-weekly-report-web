@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={"container p-6"}>
       <Weekly />
-      <Toaster />
+      <Toaster position={"top-right"} />
     </main>
   );
 }
