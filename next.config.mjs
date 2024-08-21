@@ -1,7 +1,7 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/ai-weekly-report-web",
+  assetPrefix: "./",
   images: {
     unoptimized: true,
   },
