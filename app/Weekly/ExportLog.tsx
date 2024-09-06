@@ -21,7 +21,7 @@ export default function ExportLog() {
     const firstDayOfWeekWithTime = moment()
       .startOf("week")
       .format("YYYY-MM-DD");
-    return `git log --since="${firstDayOfWeekWithTime}" --until="${today}" --pretty=format:"%h,%an,%ae,%ad,%s" --date=iso > log.csv`;
+    return `git log --since="${firstDayOfWeekWithTime}" --until="${today}" --pretty=format:"%h,%an,%ae,%ad,%s,%b" --date=iso > log.csv`;
   }, []);
 
   return (
